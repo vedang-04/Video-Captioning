@@ -52,7 +52,7 @@ vocab_list = []
 for y in y_data:
     for caption in y['caption']:
         caption = "<bos> " + caption + " <eos>" #for the decoder model to understand when the caption begins and when it ends. Useful in prediction of the caption for test data.
-        # we are only using sentences whose length lie between 6 and 10
+        # we are only using sentences whose length lie between 6 and 10 since use of the encoder-decoder model
         if len(caption.split())>10 or len(caption.split())<6:
             continue
         else:
